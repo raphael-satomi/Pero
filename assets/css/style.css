@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Primary Menu */
+.top_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+.top_header .container {
+    width: 100%;
+    max-width: 1200px;
+}
+.top_header a {
+    text-decoration: none;
+}
+.menu-primary ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.menu-primary ul li {
+    height: 100%;
+    line-height: 60px;
+}
+.menu-primary ul li a {
+    display: block;
+    padding: 0 20px;
+    transition: all ease .25s;
+}
+.menu-primary ul li a:hover {
+    opacity: .8;
+}
+
+/* Main Content */
+.main_content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main_content .container {
+    width: 100%;
+    max-width: 1900px;
+    display: flex;
+}
+/* Left Side */
+.main_content .container .left_side {
+    width: 70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.imagem_fundo {
+    width: 100%;
+    position: absolute;
+}
+
+/* Right Side*/
+.main_content .container .right_side {
+    width: 30%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_content .container .right_side .content_inside {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main_content .container .right_side .logo img {
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+    padding: 30px 0;
+}
+.destaque_nome {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.info_contato {
+    padding: 30px 0;
+}
+.info_socialicons a {
+    text-decoration: none;
+}
+.info_socialicons img{
+    height: 25px;
+    width: auto;
+    margin: 0 10px;
+}
+.info_curriculo a{
+    background-color: #FFF;
+    color: #000;
+    text-decoration: none;
+    padding: 13px 30px;
+    display: block;
+    font-weight: bold;
+    margin: 30px 0;
+}
