@@ -3,7 +3,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body class="rp_corfundo" <?php body_class(); ?>>
 	<header>
 
         <div class="top_header rp_corprincipal container-pai">

@@ -13,10 +13,12 @@
             <div class="right_side">
                 <div class="content_inside">
                     <div class="logo">
-                        <?php
-                            if(has_custom_logo()) {
-                                the_custom_logo();
-                            }
+                        <?php 
+                            if( get_theme_mod('rp_fotoPerfil')): ?>
+                                <img class="imagem_perfil" src="<?php echo get_theme_mod('rp_fotoPerfil'); ?>" alt=""/><?php 
+                            else: ?>
+                                <div class="imagem_perfil_vazia rp_corfundo"></div><?php
+                            endif; 
                         ?>
                     </div>
                     <div class="info_pessoal">

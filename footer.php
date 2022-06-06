@@ -3,7 +3,7 @@
         </footer>
         <?php wp_footer(); ?>
         <style>
-            body {
+            .rp_corfundo {
                 background-color: <?= get_theme_mod('rp_corfundo') ? get_theme_mod('rp_corfundo') : '#e0e0e1'?>
             }
             .rp_corprincipal {

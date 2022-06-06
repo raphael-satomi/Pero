@@ -9,13 +9,13 @@
         $wp_customize->add_setting('rp_email', array('default' => 'email@gmail.com'));
         $wp_customize->add_setting('rp_telefone', array('default' => '(XX) XXXXX-XXXX'));
         $wp_customize->add_setting('rp_fundoImage', array('default' => ''));
+        $wp_customize->add_setting('rp_fotoPerfil', array('default' => ''));
         $wp_customize->add_setting('rp_curriculo', array('default' => ''));
         
         // Sections
         $wp_customize->add_section('rp_dados_section', array(
             'title' => 'Dados Básicos',
-            'priority' => '2',
-            'panel' => 'opcoes'
+            'priority' => 1
         ));
     
         // Controllers
@@ -76,6 +76,18 @@
                     'section' => 'rp_dados_section',
                     'settings' => 'rp_celular',
                     'type' => 'text'
+                )
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'rp_fotoPerfil',
+                array(
+                    'label' => 'Foto Perfil',
+                    'section' => 'rp_dados_section',
+                    'settings' => 'rp_fotoPerfil',
+                    'type' => 'image'
                 )
             )
         );
