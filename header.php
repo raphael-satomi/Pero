@@ -6,7 +6,7 @@
 <body <?php body_class(); ?>>
 	<header>
 
-        <div class="top_header rp_corprincipal">
+        <div class="top_header rp_corprincipal container-pai">
             <div class="container">
 
                 <div class="menu-primary" id="navbar">

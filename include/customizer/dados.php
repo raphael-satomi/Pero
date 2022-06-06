@@ -9,6 +9,7 @@
         $wp_customize->add_setting('rp_email', array('default' => 'email@gmail.com'));
         $wp_customize->add_setting('rp_telefone', array('default' => '(XX) XXXXX-XXXX'));
         $wp_customize->add_setting('rp_fundoImage', array('default' => ''));
+        $wp_customize->add_setting('rp_curriculo', array('default' => ''));
         
         // Sections
         $wp_customize->add_section('rp_dados_section', array(
@@ -87,6 +88,18 @@
                     'section' => 'rp_dados_section',
                     'settings' => 'rp_fundoImage',
                     'type' => 'image'
+                )
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Media_Control(
+                $wp_customize,
+                'rp_curriculo',
+                array(
+                    'label' => 'Curriculo',
+                    'section' => 'rp_dados_section',
+                    'settings' => 'rp_curriculo',
+                    'mime_type' => 'application/pdf'
                 )
             )
         );

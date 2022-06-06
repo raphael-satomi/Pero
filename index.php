@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
-    <div class="main_content">
-        <div class="container">
+    <div class="main_content container-pai">
+        <div class="container rp_corprincipal">
             <div class="left_side">
+                <?= get_theme_mod('rp_fundoImage') ?>
+                <?= get_theme_mod('rp_curriculo') ?>
+                
                 <?php if( get_theme_mod('rp_fundoImage')): ?>
                     <img class="imagem_fundo" src="<?php echo get_theme_mod('rp_fundoImage'); ?>" alt=""/>
                 <?php endif; ?>
             </div>
-            <div class="right_side rp_corprincipal">
+            <div class="right_side">
                 <div class="content_inside">
                     <div class="logo">
                         <?php
@@ -71,7 +74,7 @@
 
                     <div class="info_curriculo">
                         <?php if( get_theme_mod('rp_curriculo')): ?>
-                            <a href="<?php echo get_theme_mod('rp_curriculo'); ?>" target="_blank">
+                            <a href="<?= wp_get_attachment_url( get_theme_mod('rp_curriculo') ) ?>" target="_blank">
                                 Baixar curriculo
                             </a>
                         <?php endif; ?>
@@ -85,7 +88,12 @@
         </div>
     </div>
 
-
+    <section class="section1 container-pai" id="#sobre">
+        <div class="container">
+            <h1><?= get_theme_mod('rp_titulo_section1')? get_theme_mod('rp_titulo_section1') : 'Sobre' ?></h1>
+            <p><?= get_theme_mod('rp_descricao_section1')? get_theme_mod('rp_descricao_section1') : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'?></p>
+        </div>
+    </section>
 
 
 
