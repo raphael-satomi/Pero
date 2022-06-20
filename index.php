@@ -97,6 +97,75 @@
         </div>
     </section>
 
+    <section class="section2 container-pai " id="#sobre">
+        <div class="container">
+
+            <div class="leftSide">
+                <h1><?= get_theme_mod('rp_titulo_formacao')? get_theme_mod('rp_titulo_formacao') : '' ?></h1>
+                <?php 
+                    if( get_theme_mod('rp_descricao_formacao') ) {
+                        $formacoes = explode('\n', get_theme_mod('rp_descricao_formacao'));
+                        foreach( $formacoes as $formacaoData ) {
+                            $splitData = explode("]", $formacaoData);
+                            $formacaoDate = str_replace("[", "", $splitData[0]);?>
+                            <div class="info-data">
+                                <h1><?= $formacaoDate ?></h1>
+                                <p><?= $splitData[1] ?></p>
+                            </div><?php
+                        }
+                    }
+                ?>
+            </div>
+
+            <div class="rightSide">
+                <h1><?= get_theme_mod('rp_titulo_experiencia')? get_theme_mod('rp_titulo_experiencia') : '' ?></h1>
+                <?php 
+                    if( get_theme_mod('rp_descricao_experiencia') ) {
+                        $formacoes = explode('\n', get_theme_mod('rp_descricao_experiencia'));
+                        foreach( $formacoes as $formacaoData ) {
+                            $splitData = explode("]", $formacaoData);
+                            $formacaoDate = str_replace("[", "", $splitData[0]);?>
+                            <div class="info-data">
+                                <h1><?= $formacaoDate ?></h1>
+                                <p><?= $splitData[1] ?></p>
+                            </div><?php
+                        }
+                    }
+                ?>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section3 container-pai" id="#habilidade-e-idiomas">
+        <div class="container">
+            <h1><?= get_theme_mod('rp_titulo_habilidades')? get_theme_mod('rp_titulo_habilidades') : 'Habilidades e Idiomas' ?></h1>
+            <div class="level-ability-show">
+                <div class="">Básico</div>
+                <div class="">Intermediário</div>
+                <div class="">Avançado</div>
+            </div>
+            <?php 
+                if( get_theme_mod('rp_descricao_habilidades') ) {
+                    $habilidades = explode('\n', get_theme_mod('rp_descricao_habilidades'));
+                    foreach( $habilidades as $habilidade ) {?>
+
+                        <div class="level-ability">
+                            <div class="name"><?= $habilidade ?></div>
+                            <div class="level-ability-show" level="">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <?php echo "<p>".$habilidade."</p>";
+                    }
+                }
+            ?>
+        </div>
+    </section>
+
 
 
 

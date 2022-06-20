@@ -7,7 +7,7 @@
         $wp_customize->add_setting('rp_destaque', array('default' => 'Bacharel em Administração'));
         $wp_customize->add_setting('rp_cidade', array('default' => 'São Paulo, SP'));
         $wp_customize->add_setting('rp_email', array('default' => 'email@gmail.com'));
-        $wp_customize->add_setting('rp_telefone', array('default' => '(XX) XXXXX-XXXX'));
+        $wp_customize->add_setting('rp_celular', array('default' => '(XX) XXXXX-XXXX'));
         $wp_customize->add_setting('rp_fundoImage', array('default' => ''));
         $wp_customize->add_setting('rp_fotoPerfil', array('default' => ''));
         $wp_customize->add_setting('rp_curriculo', array('default' => ''));

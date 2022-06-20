@@ -5,6 +5,7 @@
     require get_template_directory().'/include/customizer/cores.php';
     require get_template_directory().'/include/customizer/section/section1.php';
     require get_template_directory().'/include/customizer/section/section2.php';
+    require get_template_directory().'/include/customizer/section/section3.php';
 
     function rp_customize_register( $wp_customize ) {
 
@@ -28,6 +29,8 @@
 
         rp_section1_customizer( $wp_customize );
         rp_section2_customizer( $wp_customize );
+        rp_section3_customizer( $wp_customize );
+
 
 
     }

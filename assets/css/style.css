@@ -70,6 +70,7 @@ ul, li {
 .imagem_fundo {
     width: 100%;
     position: absolute;
+    filter: brightness(0.5);
 }
 
 /* Right Side*/
@@ -94,11 +95,18 @@ ul, li {
     border-radius: 50%;
     margin: 15px 0;
 }
-.main_content .container .right_side .logo img {
-    width: auto;
-    height: 200px;
+.main_content .container .right_side .logo{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     padding: 15px 0;
+    overflow: hidden;
+}
+.main_content .container .right_side .logo img {
+    width: 100%;
+    height: auto;
 }
 .destaque_nome {
     font-size: 1.8rem;
@@ -140,4 +148,36 @@ section h1 {
 section p {
     margin: 10px 0;
     font-size: 1.3rem;
+}
+/* Seção 2 */
+.section2 {
+    backdrop-filter: contrast(0.8);
+}
+.section2 .container {
+    display: flex;
+    justify-content: space-between;
+}
+.section2 .container .leftside,
+.section2 .container .rightside{
+    width: 40%;
+}
+.info-data {
+    margin: 30px 0;
+}
+.info-data h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.info-data p {
+    margin: 0;
+    font-size: 19px;
+} 
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
 }
