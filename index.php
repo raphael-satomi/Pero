@@ -90,14 +90,14 @@
         </div>
     </div>
 
-    <section class="section1 container-pai" id="#sobre">
+    <section class="section1 container-pai" id="sobre">
         <div class="container">
             <h1><?= get_theme_mod('rp_titulo_section1')? get_theme_mod('rp_titulo_section1') : 'Sobre' ?></h1>
             <p><?= get_theme_mod('rp_descricao_section1')? get_theme_mod('rp_descricao_section1') : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'?></p>
         </div>
     </section>
 
-    <section class="section2 container-pai " id="#sobre">
+    <section class="section2 container-pai " id="formacao-e-experiencia">
         <div class="container">
 
             <div class="leftSide">
@@ -137,13 +137,13 @@
         </div>
     </section>
 
-    <section class="section3 container-pai" id="#habilidade-e-idiomas">
+    <section class="section3 container-pai" id="habilidade-e-idiomas">
         <div class="container">
             <h1><?= get_theme_mod('rp_titulo_habilidades')? get_theme_mod('rp_titulo_habilidades') : 'Habilidades e Idiomas' ?></h1>
-            <div class="level-ability-show">
-                <div class="">Básico</div>
-                <div class="">Intermediário</div>
-                <div class="">Avançado</div>
+            <div class="level-ability-names">
+                <div class="level-name">Básico</div>
+                <div class="level-name">Intermediário</div>
+                <div class="level-name">Avançado</div>
             </div>
             <?php 
                 if( get_theme_mod('rp_descricao_habilidades') ) {
@@ -151,15 +151,38 @@
                     foreach( $habilidades as $habilidade ) {?>
 
                         <div class="level-ability">
-                            <div class="name"><?= $habilidade ?></div>
-                            <div class="level-ability-show" level="">
+                            <?php 
+                                preg_match_all('/\[(.*)\]/i', $habilidade, $matchLevel); 
+                                preg_match_all('/(.*)\[/i', $habilidade, $matchName); 
+                            ?>
+                            <div class="name"><?= $matchName[1][0] ?></div>
+                            <div class="level-ability-show" level="<?= $matchLevel[1][0] ?>">
                                 <div></div>
                                 <div></div>
                                 <div></div>
                             </div>
-                        </div>
+                        </div><?php
+                    }
+                }
+            ?>
+            <div class="level-divisor"></div>
+            <?php 
+                if( get_theme_mod('rp_descricao_idiomas') ) {
+                    $idiomas = explode('\n', get_theme_mod('rp_descricao_idiomas'));
+                    foreach( $idiomas as $idioma ) {?>
 
-                        <?php echo "<p>".$habilidade."</p>";
+                        <div class="level-ability">
+                            <?php 
+                                preg_match_all('/\[(.*)\]/i', $idioma, $matchLevel); 
+                                preg_match_all('/(.*)\[/i', $idioma, $matchName); 
+                            ?>
+                            <div class="name"><?= $matchName[1][0] ?></div>
+                            <div class="level-ability-show" level="<?= $matchLevel[1][0] ?>">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div><?php
                     }
                 }
             ?>
