@@ -1,6 +1,6 @@
 <?php
 function rp_theme_styles() {
-	wp_enqueue_style('template_css', get_template_directory_uri().'/assets/css/style.css');
+	wp_enqueue_style('template_css', get_template_directory_uri().'/assets/css/style.css?v=2');
 
 	wp_enqueue_script('script_js', get_template_directory_uri().'/assets/js/script.js', array('jquery'), false, true);
 }
