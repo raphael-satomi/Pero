@@ -305,7 +305,7 @@ footer {
         flex-direction: column;
         align-items: start;
         overflow: hidden;
-        padding: 50px 0 20px 0;
+        padding: 70px 0 20px 0;
     }
     .menu-primary ul li {
         width: 100%;
@@ -316,5 +316,6 @@ footer {
     }
     .top_header.show-menu-mobile .container{
         margin-top: 0px;
+        backdrop-filter: contrast(0.9);
     }
 }
