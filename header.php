@@ -3,6 +3,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <title> Portfólio <?= get_theme_mod('rp_nome')? '| '.get_theme_mod('rp_nome') : false ?></title>
 	<?php wp_head(); ?>
+    <?php
+        if( get_theme_mod('rp_shortIcon')): ?>
+            <link rel="shortcut icon" href="<?php echo get_theme_mod('rp_shortIcon'); ?>" type="image/x-icon" /><?php
+        endif; 
+    ?>
 </head>
 <body class="rp_corfundo" <?php body_class(); ?>>
 	<header>

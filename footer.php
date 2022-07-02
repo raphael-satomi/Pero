@@ -1,5 +1,5 @@
         <footer class="rp_corprincipal rp_cortexto">
-            © 2022 Desenvolvido por Raphael Satomi com Wordpress
+            © 2022 Desenvolvido por <a target="_blank" href="https://github.com/raphael-satomi">Raphael Satomi</a> com Wordpress
         </footer>
         <?php wp_footer(); ?>
         <style>

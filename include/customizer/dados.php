@@ -10,6 +10,7 @@
         $wp_customize->add_setting('rp_celular', array('default' => '(XX) XXXXX-XXXX'));
         $wp_customize->add_setting('rp_fundoImage', array('default' => ''));
         $wp_customize->add_setting('rp_fotoPerfil', array('default' => ''));
+        $wp_customize->add_setting('rp_shortIcon', array('default' => ''));
         $wp_customize->add_setting('rp_curriculo', array('default' => ''));
         
         // Sections
@@ -87,6 +88,18 @@
                     'label' => 'Foto Perfil',
                     'section' => 'rp_dados_section',
                     'settings' => 'rp_fotoPerfil',
+                    'type' => 'image'
+                )
+            )
+        );
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'rp_shortIcon',
+                array(
+                    'label' => 'Short Icon',
+                    'section' => 'rp_dados_section',
+                    'settings' => 'rp_shortIcon',
                     'type' => 'image'
                 )
             )
